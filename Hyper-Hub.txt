@@ -81,6 +81,14 @@ Tab:AddButton({
       		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/AAwful/VectorHub/main/Loader.lua"))())
   	end    
 })
+
+Tab:AddButton({
+	Name = "Bonez Hub",
+	Callback = function(exec)
+      		_G.English = true
+loadstring(game:HttpGet("https://paste.gg/p/anonymous/75487fb8949349828e4e4a91bfb8eb6e/files/6ebc9f2055f641fbb606ff494ac4ee53/raw"))()
+  	end    
+})
  
 -- section
  

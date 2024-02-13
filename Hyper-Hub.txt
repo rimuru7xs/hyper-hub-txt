@@ -114,16 +114,6 @@ Tab:AddButton({
       		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/Ethanoj1/EclipseMM2/master/Script", true))())
   	end    
 })
-
-
- 
-Tab:AddButton({
-	Name = "Symphony Hub",
-	Callback = function(exec)
-      		print(loadstring(game:HttpGet("https://raw.githubusercontent.com/chead-z/Shizukii/main/Hub.lua", true))())
-  	end    
-})
-
 --section
 
 local Section = Tab:AddSection({
@@ -153,8 +143,7 @@ Tab:AddSlider({
 	Name = "Velocidade",
 	Min = 16,
 	Max = 500,
-	Default = 5,
-	Color = Color3.fromRGB(20,20,20),
+	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "WS",
 	Callback = function(Value)
@@ -166,14 +155,32 @@ Tab:AddSlider({
 	Name = "Poder do Pulo",
 	Min = 50,
 	Max = 300,
-	Default = 46,
-	Color = Color3.fromRGB(20,20,5),
+	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "jump",
 	Callback = function(Value)
 	game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 	end    
 })
+
+local Section = Tab:AddSection({
+	Name = "Reset"
+})
+
+Tab:AddButton({
+	Name = "Resetar Velocidade",
+	Callback = function()
+	      		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16      		
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Resetar Pulo",
+	Callback = function()
+	      		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50      		
+  	end    
+})
+ 
  
  --creditos
  
